@@ -310,6 +310,7 @@ async function removeCartItem(cartId) {
 		}
 		/*
 		fetch()
+		屬於非同步操作，前面需要加上 await，
 		這方法回傳的是回應物件，而不是資料本身。
 		資料還在 body 裡，而且是 stream 格式，尚未解析完成。
 		body: { stream: undefined }
@@ -318,6 +319,7 @@ async function removeCartItem(cartId) {
 		純文字 → .text()
 		Blob（檔案）→ .blob()
 		ArrayBuffer → .arrayBuffer()
+		由於網路資料可能很大，所以進行解析的時候也是非同步操作，需要加上 await。
 		這樣就能把它轉換成可用的資料。
 		*/
 		const data = await response.json();
