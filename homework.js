@@ -41,6 +41,7 @@ async function getProducts() {
 		}
 		/*
 		fetch()
+		屬於非同步操作，前面需要加上 await，
 		這方法回傳的是回應物件，而不是資料本身。
 		資料還在 body 裡，而且是 stream 格式，尚未解析完成。
 		body: { stream: undefined }
@@ -49,6 +50,7 @@ async function getProducts() {
 		純文字 → .text()
 		Blob（檔案）→ .blob()
 		ArrayBuffer → .arrayBuffer()
+		由於網路資料可能很大，所以進行解析的時候也是非同步操作，需要加上 await。
 		這樣就能把它轉換成可用的資料。
 		*/
 		const data = await response.json();
@@ -81,6 +83,7 @@ async function getCart() {
 		}
 		/*
 		fetch()
+		屬於非同步操作，前面需要加上 await，
 		這方法回傳的是回應物件，而不是資料本身。
 		資料還在 body 裡，而且是 stream 格式，尚未解析完成。
 		body: { stream: undefined }
@@ -89,6 +92,7 @@ async function getCart() {
 		純文字 → .text()
 		Blob（檔案）→ .blob()
 		ArrayBuffer → .arrayBuffer()
+		由於網路資料可能很大，所以進行解析的時候也是非同步操作，需要加上 await。
 		這樣就能把它轉換成可用的資料。
 		*/
 		const data = await response.json();
@@ -135,6 +139,7 @@ async function getProductsSafe() {
 		}
 		/*
 		fetch()
+		屬於非同步操作，前面需要加上 await，
 		這方法回傳的是回應物件，而不是資料本身。
 		資料還在 body 裡，而且是 stream 格式，尚未解析完成。
 		body: { stream: undefined }
@@ -143,6 +148,7 @@ async function getProductsSafe() {
 		純文字 → .text()
 		Blob（檔案）→ .blob()
 		ArrayBuffer → .arrayBuffer()
+		由於網路資料可能很大，所以進行解析的時候也是非同步操作，需要加上 await。
 		這樣就能把它轉換成可用的資料。
 		*/
 		const data = await response.json();
@@ -207,6 +213,7 @@ async function addToCart(productId, quantity) {
 		}
 		/*
 		fetch()
+		屬於非同步操作，前面需要加上 await，
 		這方法回傳的是回應物件，而不是資料本身。
 		資料還在 body 裡，而且是 stream 格式，尚未解析完成。
 		body: { stream: undefined }
@@ -215,6 +222,7 @@ async function addToCart(productId, quantity) {
 		純文字 → .text()
 		Blob（檔案）→ .blob()
 		ArrayBuffer → .arrayBuffer()
+		由於網路資料可能很大，所以進行解析的時候也是非同步操作，需要加上 await。
 		這樣就能把它轉換成可用的資料。
 		*/
 		const data = await response.json();
@@ -262,6 +270,7 @@ async function updateCartItem(cartId, quantity) {
 		}
 		/*
 		fetch()
+		屬於非同步操作，前面需要加上 await，
 		這方法回傳的是回應物件，而不是資料本身。
 		資料還在 body 裡，而且是 stream 格式，尚未解析完成。
 		body: { stream: undefined }
@@ -270,6 +279,7 @@ async function updateCartItem(cartId, quantity) {
 		純文字 → .text()
 		Blob（檔案）→ .blob()
 		ArrayBuffer → .arrayBuffer()
+		由於網路資料可能很大，所以進行解析的時候也是非同步操作，需要加上 await。
 		這樣就能把它轉換成可用的資料。
 		*/
 		const data = await response.json();
@@ -359,6 +369,7 @@ async function clearCart() {
 		}
 		/*
 		fetch()
+		屬於非同步操作，前面需要加上 await，
 		這方法回傳的是回應物件，而不是資料本身。
 		資料還在 body 裡，而且是 stream 格式，尚未解析完成。
 		body: { stream: undefined }
@@ -367,6 +378,7 @@ async function clearCart() {
 		純文字 → .text()
 		Blob（檔案）→ .blob()
 		ArrayBuffer → .arrayBuffer()
+		由於網路資料可能很大，所以進行解析的時候也是非同步操作，需要加上 await。
 		這樣就能把它轉換成可用的資料。
 		*/
 		const data = await response.json();
